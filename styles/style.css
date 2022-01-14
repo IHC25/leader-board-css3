@@ -6,6 +6,11 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: #f3f1ff;
+  margin: 0;
+}
+header {
+  display: flex;
+  flex-direction: row;
 }
 main {
   display: flex;
@@ -22,6 +27,49 @@ main {
 hr {
   border: 1px solid #d1d1d1;
   margin-bottom: 27px;
+}
+
+/* header styles */
+nav {
+  background-color: #562eff;
+  width: 100%;
+  height: 94px;
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20%;
+}
+.ideas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ideas img {
+  width: 40px;
+  height: 51px;
+}
+.ideas h3 {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 500;
+  margin-left: 16px;
+}
+.menus {
+  display: flex;
+  align-items: center;
+}
+.menus a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  margin-right: 36px;
+}
+.menus img {
+  width: 51px;
+  height: 51px;
 }
 
 /* -----------------
@@ -149,8 +197,14 @@ Media Queries
 
 /* Mobile devices */
 @media only screen and (max-width: 688px) {
+  .menu-container {
+    column-gap: 0;
+  }
   .container {
     width: 100%;
+  }
+  .section-style {
+    text-align: center;
   }
   .players,
   .blogs,
@@ -168,6 +222,9 @@ Media Queries
 
 /* Tablet Devices */
 @media only screen and (min-width: 688px) and (max-width: 992px) {
+  .menu-container {
+    column-gap: 0;
+  }
   .container {
     width: 100%;
   }
